@@ -11,6 +11,8 @@ const Home = () => {
     const questSession = QuestSession();
     const [path, setPath] = useState('');
 
+    /* questSession.initializeSession(); */
+
     // Niveau 1 si on débute le jeu, sinon niveau suivant
     useEffect(() => {
         const nextPath = questSession.getQuestResult(0);

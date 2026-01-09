@@ -14,7 +14,6 @@ import EmotionEnd from './Emotion/EmotionEnd.js';
 import Douleur from './Douleur/index.js';
 import DouleurGame from './Douleur/DouleurGame.js';
 
-
 const index = () => {
     return (
         <>

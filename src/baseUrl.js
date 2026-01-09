@@ -5,7 +5,7 @@ if (process.env.NODE_ENV === 'development') {
     baseUrl = process.env.PUBLIC_URL;
 } else {
     // Environnement de production
-    baseUrl = "https://alys.pydonze.fr";
+    baseUrl = "https://pierreyvesdonze.github.io/alys";
 }
 
 export default baseUrl;
