@@ -1,0 +1,215 @@
+@import "./responsive";
+
+/*
+******************************************
+VARIABLES
+******************************************
+*/
+:root {
+    --primary-color: #000000;
+    --text-color: #fcfcfc;
+    --second-text-color: rgb(253, 238, 30);
+    --quest-text: "Montserrat Alternates", sans-serif;
+    --text-btn: "Raleway", sans-serif;
+    --text-btn-color: #b9cad1;
+    --text-hover-color: rgb(120, 215, 231);
+}
+
+/*
+******************************************
+GENERAL
+******************************************
+*/
+body {
+    height: 100vh;
+    margin: 0;
+    overflow: auto;
+    background-color: var(--primary-color);
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+* {
+    user-select: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+    font-family: var(--quest-text) !important;
+}
+
+/*
+******************************************
+TEXTS
+******************************************
+*/
+.motion-text-container {
+    height: 100vh;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.animated-text {
+    font-size: 2rem;
+    font-family: var(--quest-text);
+    @include xs {
+        font-size: 1.2rem;
+    }
+}
+
+.animated-text-container {
+    background-color: transparent;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+
+.animated-text-component {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 2em;
+    width: 70%;
+    @include xs {
+        font-size: 1.1em;
+        width: 90%;
+        margin-top: 10%;
+    }
+}
+
+/*
+******************************************
+BUTTONS
+******************************************
+*/
+.play-btn {
+    animation: textGlow 2s infinite alternate;
+}
+
+@keyframes textGlow {
+    0% {
+        text-shadow: 0 0 0px white;
+    }
+    100% {
+        text-shadow: 0 0 9px var(--text-hover-color);
+    }
+}
+
+.choice-text-btn-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4em;
+}
+
+.choice-text-btn {
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 1.4em !important;
+    letter-spacing: 3px;
+    margin: 10px;
+    border: none;
+    color: var(--text-btn-color);
+    font-family: var(--text-btn) !important;
+    font-style: italic;
+    font-size: 100;
+    &:hover {
+        color: var(--second-text-color);
+    }
+    @include xs {
+        font-size: 1.2em !important;
+    }
+}
+.next-chapter-btn {
+    &:hover {
+        color: var(--text-hover-color) !important;
+    }
+}
+
+.custom-link-btn {
+    font-size: 1.8em;
+    margin: 10px;
+    color: var(--text-color) !important;
+    text-decoration: none;
+    text-align: center;
+    &:hover {
+        color: var(--text-hover-color) !important;
+    }
+}
+
+.decrease-btn {
+    position: absolute;
+    border: solid black 10px;
+    top: 50%;
+    left: 50%;
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    font-size: 3em;
+    font-weight: bold;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    background-color: var(--second-text-color);
+    transition: background-color 0.5s ease, box-shadow 0.3s ease;
+    box-shadow: inset 0 0 2px 15px rgb(247, 210, 2);
+    box-shadow: 0px 0px 10px rgba(253, 217, 9, 0.2);
+
+    &:hover {
+        background-color: var(--text-hover-color);
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); 
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.1); // Couleur blanche plus transparente
+        transform: translate(-50%, -50%);
+        backdrop-filter: blur(20px);
+        z-index: -1; // Assure que le cercle est derrière le bouton
+    }
+}
+
+/*
+******************************************
+CONSCIENCE
+******************************************
+*/
+.conscience-reorder-ul {
+    //width: 20px;
+    position: static !important;
+    display: flex;
+}
+
+.conscience-reorder-li {
+    list-style-type: none;
+    font-size: 1.5em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 15px 18px;
+    background: var(--second-text-color);
+    border-radius: 5px;
+    cursor: grab;
+    @include xs {
+        font-size: 0.8em;
+        padding: 12px 12px;
+    }
+}

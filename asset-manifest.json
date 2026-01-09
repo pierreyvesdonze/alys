@@ -1,0 +1,10 @@
+{
+  "files": {
+    "main.js": "/alys/static/js/main.d61a83fe.js",
+    "index.html": "/alys/index.html",
+    "main.d61a83fe.js.map": "/alys/static/js/main.d61a83fe.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.d61a83fe.js"
+  ]
+}
