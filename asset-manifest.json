@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/alys/static/js/main.234cc956.js",
+    "main.js": "/alys/static/js/main.144095ee.js",
     "index.html": "/alys/index.html",
-    "main.234cc956.js.map": "/alys/static/js/main.234cc956.js.map"
+    "main.144095ee.js.map": "/alys/static/js/main.144095ee.js.map"
   },
   "entrypoints": [
-    "static/js/main.234cc956.js"
+    "static/js/main.144095ee.js"
   ]
 }
